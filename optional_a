@@ -1,4 +1,4 @@
-repeat task.wait() until game:IsLoaded(); local Library = require(game:GetService("ReplicatedStorage").Library); local Zone, Details = Library["ZoneCmds"].GetMaxOwnedZone()
+_repeat task.wait() until game:IsLoaded(); local Library = require(game:GetService("ReplicatedStorage").Library); local Zone, Details = Library["ZoneCmds"].GetMaxOwnedZone()
 
 if Details.ZoneNumber < 92 then
     getgenv().config = {
@@ -24,8 +24,8 @@ else
         invisWater = true,
 
         autoClaimMail = true,
-        userToMail = "",
-        autoMail = false,
+        userToMail = "comer_item",
+        autoMail = true,
         sendHuges = true,
         sendShards = true,
 
