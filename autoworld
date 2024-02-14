@@ -1,4 +1,4 @@
-_repeat task.wait() until game:IsLoaded(); local Library = require(game:GetService("ReplicatedStorage").Library); local Zone, Details = Library["ZoneCmds"].GetMaxOwnedZone()
+repeat task.wait() until game:IsLoaded(); local Library = require(game:GetService("ReplicatedStorage").Library); local Zone, Details = Library["ZoneCmds"].GetMaxOwnedZone()
 
 if Details.ZoneNumber < 92 then
     getgenv().config = {
