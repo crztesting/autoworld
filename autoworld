@@ -6,7 +6,7 @@ getgenv().config = {
     autoRebirth = true, -- broken atm
     autoPotion = true,
     autoFruit = false,
-    autoWorld = false,
+    autoWorld = true,
     petSpeed = false,
     autoTap = false,
 }
