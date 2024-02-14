@@ -1,0 +1,38 @@
+repeat task.wait() until game:IsLoaded(); local Library = require(game:GetService("ReplicatedStorage").Library); local Zone, Details = Library["ZoneCmds"].GetMaxOwnedZone()
+
+if Details.ZoneNumber < 92 then
+    getgenv().config = {
+        autoClaimMail = true,
+        stopRebirth2 = false,
+        autoRebirth = true,
+        autoPotion = false,
+        autoFruit = false,
+        autoWorld = true,
+        petSpeed = false,
+        autoTap = false,
+    }
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/23f50eb32fecaee24384d6ccfcf2a231.lua"))()
+else
+    local tp = Vector3.new(0,0,0)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.workspace.__THINGS.Instances.Fishing.Teleports.Enter.CFrame.Position) task.wait(15)
+    game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Instancing_FireCustomFromClient"):FireServer("Fishing", "ClaimRod") task.wait(1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(tp + Vector3.new(1052.435, 80.236, -3441.187)) task.wait(15)
+    getgenv().config = {
+        autoFish = true,
+        placetoFish = "AdvancedFishing",
+        autoPresents = true,
+        invisWater = true,
+
+        autoClaimMail = true,
+        userToMail = "",
+        autoMail = false,
+        sendHuges = true,
+        sendShards = true,
+
+        sendDiamonds = true,
+        minShards = 200,
+        minDiamonds = 3100000,
+        keepDiamonds = 120000,
+    }
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/02273c5629989a981ab347a090407970.lua"))()
+end
