@@ -1,0 +1,33 @@
+repeat wait() until game:IsLoaded()
+task.spawn(function()
+getgenv().config = {
+    autoClaimMail = true,
+    stopRebirth2 = false, -- broken atm
+    autoRebirth = true, -- broken atm
+    autoPotion = false,
+    autoFruit = false,
+    autoWorld = true,
+    petSpeed = false,
+    autoTap = false,
+}
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/23f50eb32fecaee24384d6ccfcf2a231.lua"))()
+end)
+
+task.spawn(function()
+    task.wait(5)
+getgenv().AuthKey = "HUGE_8hpPoDt3FNr0"
+getgenv().LoadSettings = {
+Example_Setting = Example_Value
+}
+loadstring(game:HttpGet("https://HugeGames.io/ps99"))()
+end)
+
+task.spawn(function()
+    task.wait(5)
+local StarterGui = game:GetService('StarterGui')
+StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, false)
+
+game:GetService('StarterGui'):SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, false)
+
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.EmotesMenu, false)
+end)
