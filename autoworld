@@ -5,11 +5,11 @@ if Details.ZoneNumber < 92 then
         autoClaimMail = true,
         stopRebirth2 = false,
         autoRebirth = true,
-        autoPotion = false,
-        autoFruit = false,
+        autoPotion = true,
+        autoFruit = true,
         autoWorld = true,
-        petSpeed = false,
-        autoTap = false,
+        petSpeed = true,
+        autoTap = true,
     }
     loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/23f50eb32fecaee24384d6ccfcf2a231.lua"))()
 else
